@@ -1,0 +1,11 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+background: rgb(12, 12, 50);
+    background: linear-gradient(90deg, rgba(12, 12, 50, 1) 37%, rgba(42, 41, 151, 1) 97%);
+    font-family: monospace;
+    color: white;
+}
