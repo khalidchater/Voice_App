@@ -1,6 +1,7 @@
 import Header from "./components/Header";
 import Home from "./components/Home";
 import Voice from "./components/App";
+
 import "./App.css";
 import {
   createBrowserRouter,
@@ -15,7 +16,7 @@ function App() {
       <>
         <Route
           path='/'
-          element={<Home/>}
+          element={<Home />}
         />
         <Route
           path='/Voice'
@@ -23,16 +24,16 @@ function App() {
         />
         <Route
           path='/'
-          element={<Header/>}
+          element={<Header />}
         />
-     
       </>
     )
   );
   return (
     <>
-      <Header/>
-      <RouterProvider router={router}/>
+      <Header />
+      <RouterProvider router={router} />
+      
     </>
   );
 }

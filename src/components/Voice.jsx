@@ -33,14 +33,14 @@ function VoiceGenerationComponent() {
     setLoading(false);
   };
   return (
-    <div className='display flex flex-col gap-y-6 justify-center items-center h-screen bg-slate-100'>
-      <h1 className=' font-bold font-mono '>text To Voice </h1>
+    <div className='display flex flex-col gap-y-6 justify-center items-center h-screen w-full bg-slate-100'>
+      <h1 className=' font-bold font-mono text-red-500'>text To Voice </h1>
       <div className='flex items-center  gap-8 '>
         <textarea
           name=''
           id=''
           placeholder='Text To voice'
-          className='w-[60vw] h-28 p-2 rounded-xl'
+          className='w-[900px]   hidden h-28 p-2 rounded-xl'
           value={text}
           onChange={(e) => setText(e.target.value)}></textarea>
       </div>

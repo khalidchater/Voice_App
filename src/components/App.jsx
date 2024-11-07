@@ -54,7 +54,7 @@ function App() {
               placeholder='Enter text to generate speech'
               rows='5'
               cols='50'
-              className='p-5 shadow-xl rounded-3xl bg-transparent  focus:outline-none text-white font-bold text-lg w-[40rem]'
+              className='p-5 shadow-xl rounded-3xl bg-transparent  focus:outline-none text-white font-bold text-lg w-[60rem]'
             />
 
             <select
@@ -69,31 +69,32 @@ function App() {
               <option value='ErXwobaYiN019PkySvjV'>Bella</option>
             </select>
           </section>
-
-          <button
-            onClick={handleGenerateSpeech}
-            disabled={loading || !text}
-            className={` bg-blue-500 font-bold text-white p-3 rounded-3xl mt-5 ${
-              loading || !text ? "bg-gray-500 cursor-not-allowed" : ""
-            }`}>
-            {loading ? "loading..." : "Generate speech"}
-          </button>
-        </div>
-        <div className='flex justify-center'>
-          {audio && (
-            <div className=''>
-              <audio
-                key={audio}
-                controls
-                className='w-[550px]'>
-                <source
-                  src={audio}
-                  type='audio/mpeg'
-                />
-                Your browser does not support the audio element.
-              </audio>
+          <section className = "flex gap-10 items-center    ">
+            <button
+              onClick={handleGenerateSpeech}
+              disabled={loading || !text}
+              className={` bg-blue-500 font-bold text-white p-3 rounded-3xl mt-5 w-[400px]  m-auto ${
+                loading || !text ? "bg-gray-500 cursor-not-allowed" : ""
+              }`}>
+              {loading ? "loading..." : "Generate speech"}
+            </button>
+            <div className='h-8'>
+              {audio && (
+                <div className=''>
+                  <audio
+                    key={audio}
+                    controls
+                    className='w-[400px] h-12'>
+                    <source
+                      src={audio}
+                      type='audio/mpeg'
+                    />
+                    Your browser does not support the audio element.
+                  </audio>
+                </div>
+              )}
             </div>
-          )}
+          </section>
         </div>
       </div>
     </div>
